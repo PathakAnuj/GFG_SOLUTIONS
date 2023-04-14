@@ -34,22 +34,23 @@ class GFG {
 // } Driver Code Ends
 
 
+//User function Template for Java
 class Solution {
     public static long totalTime(int n, int[] arr, int[] time) {
         long[] a = new long[n];
         Arrays.fill(a, -1);
-        long current = 0;
+        long curr = 0;
         for (int i = 0; i < n; i++) {
             if (a[arr[i] - 1] == -1) {
-                a[arr[i] - 1] = current;
+                a[arr[i] - 1] = curr;
             } else {
-                if (current < a[arr[i] - 1] + time[arr[i] - 1]) {
-                    current = a[arr[i] - 1] + time[arr[i] - 1];
+                if (curr < a[arr[i] - 1] + time[arr[i] - 1]) {
+                    curr = a[arr[i] - 1] + time[arr[i] - 1];
                 }
-                a[arr[i] - 1] = current;
+                a[arr[i] - 1] = curr;
             }
-            current++;
+            curr++;
         }
-        return current - 1;
+        return curr - 1;
     }
 }
