@@ -61,7 +61,7 @@ class GFG {
 
 class Solution {
     public static long solve(int N, int[] A, int[] B) {
-        long sumo = 0,ans=0;
+        long sum = 0,anso=0;
         ArrayList<Integer> a = new ArrayList<>();
         ArrayList<Integer> b = new ArrayList<>();
         ArrayList<Integer> c = new ArrayList<>();
@@ -69,20 +69,20 @@ class Solution {
         Arrays.sort(A);
         Arrays.sort(B);
         for(int i=0;i<N;i++){
-            sumo+=(A[i]-B[i]);
+            sum+=(A[i]-B[i]);
             if(A[i]%2!=0)a.add(A[i]);
             else b.add(A[i]);
             if(B[i]%2!=0)c.add(B[i]);
             else d.add(B[i]);
         }
-        if(sumo!=0 || a.size()!=c.size())return -1;
+        if(sum!=0 || a.size()!=c.size())return -1;
         for(int i=0;i<a.size();i++){
-            ans+=(Math.abs(a.get(i)-c.get(i))/2);
+            anso+=(Math.abs(a.get(i)-c.get(i))/2);
         }
         for(int i=0;i<b.size();i++){
-            ans+=(Math.abs(b.get(i)-d.get(i))/2);
+            anso+=(Math.abs(b.get(i)-d.get(i))/2);
         }
-        return ans/2;
+        return anso/2;
     }
 }
         
