@@ -23,8 +23,6 @@ class GFG{
 } 
 // } Driver Code Ends
 
-
-
 class Solution {
     public boolean wifiRange(int N, String S, int X) {
         int[] wifi = new int[N];
