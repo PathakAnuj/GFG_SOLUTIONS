@@ -98,16 +98,15 @@ class GfG {
 
 // } Driver Code Ends
 
-
 class Solution{
     
      static int sum;
-    static void add_subtree(Node n, int disto) {
-        if ((n == null) || (disto < 0))
+    static void add_subtree(Node n, int distination) {
+        if ((n == null) || (distination < 0))
             return;
         sum += n.data;
-        add_subtree(n.left, disto - 1);
-        add_subtree(n.right, disto - 1);
+        add_subtree(n.left, distination - 1);
+        add_subtree(n.right, distination - 1);
     }
     static int traverse(Node n, int target, int k) {
         if (n == null)
@@ -116,19 +115,19 @@ class Solution{
             add_subtree(n, k);
             return k - 1;
         }
-        int disto = traverse(n.left, target, k);
-        if (disto > -1)
+        int distination = traverse(n.left, target, k);
+        if (distination > -1)
         {
             sum += n.data;
-            add_subtree(n.right, disto - 1);
-            return disto - 1;
+            add_subtree(n.right, distination - 1);
+            return distination - 1;
         }
-        disto = traverse(n.right, target, k);
-        if (disto > -1)
+        distination = traverse(n.right, target, k);
+        if (distination > -1)
         {
             sum += n.data;
-            add_subtree(n.left, disto - 1);
-            return disto - 1;
+            add_subtree(n.left, distination - 1);
+            return distination - 1;
         }
         return -1;
     }
@@ -143,3 +142,4 @@ class Solution{
         
     }
 }
+
