@@ -101,13 +101,13 @@ class GfG {
 
 class Solution{
     
-     static int sumoooo;
-    static void add_subtree(Node n, int dist) {
-        if ((n == null) || (dist < 0))
+     static int sum;
+    static void add_subtree(Node n, int disto) {
+        if ((n == null) || (disto < 0))
             return;
-        sumoooo += n.data;
-        add_subtree(n.left, dist - 1);
-        add_subtree(n.right, dist - 1);
+        sum += n.data;
+        add_subtree(n.left, disto - 1);
+        add_subtree(n.right, disto - 1);
     }
     static int traverse(Node n, int target, int k) {
         if (n == null)
@@ -116,19 +116,19 @@ class Solution{
             add_subtree(n, k);
             return k - 1;
         }
-        int dist = traverse(n.left, target, k);
-        if (dist > -1)
+        int disto = traverse(n.left, target, k);
+        if (disto > -1)
         {
-            sumoooo += n.data;
-            add_subtree(n.right, dist - 1);
-            return dist - 1;
+            sum += n.data;
+            add_subtree(n.right, disto - 1);
+            return disto - 1;
         }
-        dist = traverse(n.right, target, k);
-        if (dist > -1)
+        disto = traverse(n.right, target, k);
+        if (disto > -1)
         {
-            sumoooo += n.data;
-            add_subtree(n.left, dist - 1);
-            return dist - 1;
+            sum += n.data;
+            add_subtree(n.left, disto - 1);
+            return disto - 1;
         }
         return -1;
     }
@@ -136,9 +136,9 @@ class Solution{
     static int ladoos(Node root, int home, int k){
         // Your code goes here
         
-              sumoooo = 0;
+              sum = 0;
         traverse(root, home, k);
-        return sumoooo;
+        return sum;
         
         
     }
