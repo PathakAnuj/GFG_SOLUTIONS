@@ -26,7 +26,6 @@ public class code1
 
 
 
-
 //User function Template for Java
 
 
@@ -34,24 +33,24 @@ class Solution
 {
     public int prefixSuffixString(String s1[],String s2[])
     {
-        int count = 0;
+        int incrementor = 0;
         for(int i=0; i<s2.length; i++){
             String str = s2[i];
             int len = str.length();
             for(int j=0; j<s1.length; j++){
-                String ramPot = s1[j];
-                if(len <= ramPot.length()){
-                    if(str.equals(ramPot.substring(0, len))){
-                        count++;
+                String pot = s1[j];
+                if(len <= pot.length()){
+                    if(str.equals(pot.substring(0, len))){
+                        incrementor++;
                         break;
                     }
-                    if(str.equals(ramPot.substring(ramPot.length() - len))){
-                        count++;
+                    if(str.equals(pot.substring(pot.length() - len))){
+                        incrementor++;
                         break;
                     }
                 }
             }
         }
-        return count;
+        return incrementor;
     }
 }
