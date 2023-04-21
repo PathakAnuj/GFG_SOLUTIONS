@@ -29,6 +29,7 @@ public class GFG
 // } Driver Code Ends
 
 
+//User function Template for Java
 
 class Solution
 {
@@ -38,26 +39,26 @@ class Solution
         for(int i=0;i<n;i++)
           max=Math.max(max,arr[i]);
           
-        long sup[]=new long[max+1];
+        long uper[]=new long[max+1];
           
           
          
          for(int i=0;i<n;i++){
-             ++sup[arr[i]];
+             ++uper[arr[i]];
          }
          
          
-         for(int i=2;i<sup.length;i++){
-             sup[i]=sup[i]*i+sup[i-1];
+         for(int i=2;i<uper.length;i++){
+             uper[i]=uper[i]*i+uper[i-1];
          }
          
-        long answwwwww[]=new long[n];
+        long ans[]=new long[n];
         
         for(int i=0;i<n;i++){
             if(arr[i]>1)
-            answwwwww[i]=sup[arr[i]-1];
+            ans[i]=uper[arr[i]-1];
         }
         
-        return answwwwww;
+        return ans;
     }
 }
