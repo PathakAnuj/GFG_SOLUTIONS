@@ -34,11 +34,11 @@ class Solution
 {
     public long[] smallerSum(int n,int arr[])
     {
-        int maxa=0;
+        int max=0;
         for(int i=0;i<n;i++)
-          maxa=Math.max(maxa,arr[i]);
+          max=Math.max(max,arr[i]);
           
-        long sup[]=new long[maxa+1];
+        long sup[]=new long[max+1];
           
           
          
@@ -51,13 +51,13 @@ class Solution
              sup[i]=sup[i]*i+sup[i-1];
          }
          
-        long ans[]=new long[n];
+        long answwwwww[]=new long[n];
         
         for(int i=0;i<n;i++){
             if(arr[i]>1)
-            ans[i]=sup[arr[i]-1];
+            answwwwww[i]=sup[arr[i]-1];
         }
         
-        return ans;
+        return answwwwww;
     }
 }
