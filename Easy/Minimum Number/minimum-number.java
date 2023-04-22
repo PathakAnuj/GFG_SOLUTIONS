@@ -60,19 +60,18 @@ class Solution
 {
     public static int minimumNumber(int n, int[] arr)
     {
-        int gcdia = arr[0];
+        int ramgcd = arr[0];
         for (int i = 1; i < n; i++) 
-            gcdia = gcdia(gcdia, arr[i]);
+            ramgcd = ramgcd(ramgcd, arr[i]);
 
-        return gcdia;
+        return ramgcd;
     }
 
-    public static int gcdia(int a, int b)
+    public static int ramgcd(int a, int b)
     {
         if (b == 0)
             return a;
-        return gcdia(b, a % b);
+        return ramgcd(b, a % b);
     }
 }
-        
         
