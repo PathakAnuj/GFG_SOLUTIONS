@@ -56,22 +56,23 @@ class GFG {
 
 
 
+
 class Solution
 {
     public static int minimumNumber(int n, int[] arr)
     {
-        int ramgcd = arr[0];
+        int anujgcd = arr[0];
         for (int i = 1; i < n; i++) 
-            ramgcd = ramgcd(ramgcd, arr[i]);
+            anujgcd = anujgcd(anujgcd, arr[i]);
 
-        return ramgcd;
+        return anujgcd;
     }
 
-    public static int ramgcd(int a, int b)
+    public static int anujgcd(int a, int b)
     {
         if (b == 0)
             return a;
-        return ramgcd(b, a % b);
+        return anujgcd(b, a % b);
     }
 }
         
