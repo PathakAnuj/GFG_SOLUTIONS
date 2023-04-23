@@ -40,7 +40,7 @@ class Solution{
         ArrayList<Integer> list = new ArrayList<>(); // store index
         int a[] = new int[n];
         int b[] = new int[n];
-        int ramramans[] = new int[n];
+        int anujans[] = new int[n];
         
         for(int i=0; i<n; i++)  //smaller on left
         {
@@ -86,35 +86,35 @@ class Solution{
         for(int i=0; i<n; i++)
         {
             if(a[i]==-1 && b[i]==-1){
-                ramramans[i]=-1; continue;}
+                anujans[i]=-1; continue;}
                 
           else if(a[i]==-1){
-                ramramans[i] = b[i]; continue;}
+                anujans[i] = b[i]; continue;}
                 
           else if(b[i] == -1){
-                ramramans[i] = a[i]; continue;}
+                anujans[i] = a[i]; continue;}
                
                int d1 = Math.abs(i-a[i]);
                int d2 = Math.abs(i-b[i]);
                if(d1 == d2)
                {
                    if(arr[a[i]] < arr[b[i]])
-                        ramramans[i] = a[i];
+                        anujans[i] = a[i];
                   else if(arr[a[i]] > arr[b[i]])
-                        ramramans[i] = b[i];
+                        anujans[i] = b[i];
                   else
                   {
-                      ramramans[i] = a[i];
+                      anujans[i] = a[i];
                   }
                }
                else if(d1<d2)
                {
-                   ramramans[i] = a[i];
+                   anujans[i] = a[i];
                }
                else
-                    ramramans[i] = b[i];
+                    anujans[i] = b[i];
             
         }
-        return ramramans;
+        return anujans;
 	}
 }
