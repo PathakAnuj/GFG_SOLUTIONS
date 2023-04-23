@@ -27,8 +27,9 @@ class GFG{
 // } Driver Code Ends
 
 
-//User function Template for Java
 
+
+//User function Template for Java
 
 
 class Solution{
@@ -39,13 +40,13 @@ class Solution{
         ArrayList<Integer> list = new ArrayList<>(); // store index
         int a[] = new int[n];
         int b[] = new int[n];
-        int ans[] = new int[n];
+        int ramramans[] = new int[n];
         
         for(int i=0; i<n; i++)  //smaller on left
         {
-            int ramcurr = arr[i];
-            list.add(ramcurr);
-            while(st.size()>0 && st.peek()>=ramcurr)
+            int curr = arr[i];
+            list.add(curr);
+            while(st.size()>0 && st.peek()>=curr)
                 st.pop();
             if(st.isEmpty())
                 a[i] = -1;
@@ -53,7 +54,7 @@ class Solution{
                 a[i] = list.lastIndexOf(st.peek());
                 
                
-              st.push(ramcurr);
+              st.push(curr);
         }
         
         list.clear();
@@ -61,15 +62,15 @@ class Solution{
         
             for(int i=n-1; i>=0; i--)  //smaller on right
         {
-            int ramcurr = arr[i];
-            list.add(ramcurr);
-            while(st.size()>0 && st.peek()>=ramcurr)
+            int curr = arr[i];
+            list.add(curr);
+            while(st.size()>0 && st.peek()>=curr)
                 st.pop();
             if(st.isEmpty())
                 b[i] = -1;
             else
                 b[i] = n-list.lastIndexOf(st.peek())-1;
-              st.push(ramcurr);
+              st.push(curr);
               
              
         }
@@ -85,35 +86,35 @@ class Solution{
         for(int i=0; i<n; i++)
         {
             if(a[i]==-1 && b[i]==-1){
-                ans[i]=-1; continue;}
+                ramramans[i]=-1; continue;}
                 
           else if(a[i]==-1){
-                ans[i] = b[i]; continue;}
+                ramramans[i] = b[i]; continue;}
                 
           else if(b[i] == -1){
-                ans[i] = a[i]; continue;}
+                ramramans[i] = a[i]; continue;}
                
                int d1 = Math.abs(i-a[i]);
                int d2 = Math.abs(i-b[i]);
                if(d1 == d2)
                {
                    if(arr[a[i]] < arr[b[i]])
-                        ans[i] = a[i];
+                        ramramans[i] = a[i];
                   else if(arr[a[i]] > arr[b[i]])
-                        ans[i] = b[i];
+                        ramramans[i] = b[i];
                   else
                   {
-                      ans[i] = a[i];
+                      ramramans[i] = a[i];
                   }
                }
                else if(d1<d2)
                {
-                   ans[i] = a[i];
+                   ramramans[i] = a[i];
                }
                else
-                    ans[i] = b[i];
+                    ramramans[i] = b[i];
             
         }
-        return ans;
+        return ramramans;
 	}
 }
