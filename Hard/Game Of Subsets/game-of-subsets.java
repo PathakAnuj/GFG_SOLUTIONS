@@ -59,13 +59,13 @@ class Solution {
     }
     
     public int goodSubsets(int[] arr, int n) {
-        int rahnuma = 0;
+        int ram = 0;
         int[] dp = new int[1024];
         int[] cnt = new int[31];
         dp[0] = 1;
         for (int i : arr) {
             if (i == 1) {
-                rahnuma++;
+                ram++;
             } else if (mp[i] != 0) {
                 cnt[i]++;
             }
@@ -82,8 +82,8 @@ class Solution {
             ans = (ans + i) % mod;
         }
         ans--;
-        if (rahnuma != 0) {
-            ans = (ans * pow(rahnuma)) % mod;
+        if (ram != 0) {
+            ans = (ans * pow(ram)) % mod;
         }
         return (int) ans;
     }
