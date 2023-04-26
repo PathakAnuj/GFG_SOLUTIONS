@@ -39,6 +39,7 @@ class GFG{
 
 
 
+
 class Solution {
     static int seg[][];
     public static ArrayList<Character> easyTask(int n,String s,int q,query queries[])
@@ -51,7 +52,7 @@ class Solution {
             if(queries[i].type.equals("1")){
                 int ind=Integer.parseInt(queries[i].a);
                 char val=queries[i].b.charAt(0);
-                ram(0,0,n-1,ind,val);
+                anuj(0,0,n-1,ind,val);
             }else{
                 int l=Integer.parseInt(queries[i].a);
                 int r=Integer.parseInt(queries[i].b);
@@ -84,7 +85,7 @@ class Solution {
             seg[si][i]=a1[i]+a2[i];
         }
 	}
-    public static void ram(int si,int ss,int se,int pos,char val)
+    public static void anuj(int si,int ss,int se,int pos,char val)
 	{
 		if(ss==se){
             int in=0;
@@ -100,9 +101,9 @@ class Solution {
 		}
 		int mid=(ss+se)/2;
 		if(pos<=mid){
-			ram(2*si+1,ss,mid,pos,val);
+			anuj(2*si+1,ss,mid,pos,val);
 		}else{
-			ram(2*si+2,mid+1,se,pos,val);
+			anuj(2*si+2,mid+1,se,pos,val);
 		}
 		int a1[]=seg[2*si+1];
         int a2[]=seg[2*si+2];
