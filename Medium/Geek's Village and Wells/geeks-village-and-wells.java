@@ -57,13 +57,13 @@ class Solution
             }
         }
         while(!q.isEmpty()){
-            int curr[] = q.poll();
+            int tar[] = q.poll();
             for(int i = 0;i<4;i++){
-                int r = curr[0]+dir[i][0],  c = curr[1]+dir[i][1]; 
+                int r = tar[0]+dir[i][0],  c = tar[1]+dir[i][1]; 
                 if(r>=0 && c>=0 && r<m && c<n && (arr[r][c] == 'H' || arr[r][c] == '.')){
-                    if(res[r][c]>curr[2]+2){
-                        res[r][c] = curr[2]+2;
-                        q.add(new int[]{r, c, curr[2]+2});
+                    if(res[r][c]>tar[2]+2){
+                        res[r][c] = tar[2]+2;
+                        q.add(new int[]{r, c, tar[2]+2});
                     }
                 }
             }
