@@ -33,9 +33,9 @@ class Solution
     public long findNumber(long N)
     {
 		long[] v = { 9, 1, 3, 5, 7 };
-	    long ram = 0;
+	    long anuj = 0;
 	    while (N > 0) {
-	      ram = ram * 10 + v[(int)(N % 5)];
+	      anuj = anuj * 10 + v[(int)(N % 5)];
 	      if (N % 5 == 0) {
 	        N = N / 5;
 	        N--;
@@ -44,14 +44,14 @@ class Solution
 	        N /= 5;
 	    }
 	    Queue<Long> q = new ArrayDeque<>();
-	    while (ram > 0) {
-	      q.add(ram % 10);
-	      ram /= 10;
+	    while (anuj > 0) {
+	      q.add(anuj % 10);
+	      anuj /= 10;
 	    }
 	    while (!q.isEmpty()) {
-	      ram = ram * 10 + q.peek();
+	      anuj = anuj * 10 + q.peek();
 	      q.remove();
 	    }
-	    return ram;
+	    return anuj;
     }
 }
