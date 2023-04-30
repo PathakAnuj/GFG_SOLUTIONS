@@ -74,25 +74,25 @@ class N_ary_Tree{
 class Solution{
     HashSet<String> map;
     HashSet<Integer> map2;
-    int ans = 0;
+    int khss = 0;
     public int duplicateSubtreeNaryTree(Node root){
         if(root == null) return 0;
         map = new HashSet<>();
         map2 = new HashSet<>();
         String temp = get(root) == null ? "" : "abc";
-        return ans;
+        return khss;
     }
-    private String get(Node ramNode){
-        if(ramNode == null) return "";
-        String str = "Node-Start->"+ramNode.data;
-        if(ramNode.children == null) return str;
-        for(Node node : ramNode.children){
+    private String get(Node curNode){
+        if(curNode == null) return "";
+        String str = "Node-Start->"+curNode.data;
+        if(curNode.children == null) return str;
+        for(Node node : curNode.children){
             str += "(" + get(node) + ")";
         }
         if(map.contains(str)){
-            if(!map2.contains(ramNode.data)){
-                ans++;
-                map2.add(ramNode.data);
+            if(!map2.contains(curNode.data)){
+                khss++;
+                map2.add(curNode.data);
             }
         }else{
             map.add(str);
