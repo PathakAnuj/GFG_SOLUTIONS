@@ -52,9 +52,6 @@ class GFG {
 
 
 
-
-
-
 class Solution {
     public static boolean makePalindrome(int n, String[] arr) {
         Map<String, Integer> counts = new HashMap<>();
@@ -75,4 +72,3 @@ class Solution {
     }
 }
         
-             
