@@ -25,7 +25,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static String stringMirror(String str) {
         // code here
