@@ -56,6 +56,8 @@ class GFG {
 
 
 
+
+
 class Solution {
     public static boolean makeChanges(int N, int K, int target, int[] coins) {
         boolean[][] d = new boolean[target + 1][K + 1];
