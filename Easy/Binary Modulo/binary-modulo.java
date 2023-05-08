@@ -21,6 +21,7 @@ class GFG{
 
 // } Driver Code Ends
 
+
 class Solution{
 	int modulo(String s, int m) {
 		int value = convertBinary(s, m);
