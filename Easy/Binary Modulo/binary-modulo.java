@@ -22,10 +22,6 @@ class GFG{
 // } Driver Code Ends
 
 
-
-
-//User function Template for Java
-
 class Solution{
 	int modulo(String s, int m) {
 		int value = convertBinary(s, m);
