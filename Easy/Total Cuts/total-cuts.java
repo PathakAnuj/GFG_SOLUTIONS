@@ -60,7 +60,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static int totalCuts(int N, int K, int[] A) {
         int[] largest = new int[N];
