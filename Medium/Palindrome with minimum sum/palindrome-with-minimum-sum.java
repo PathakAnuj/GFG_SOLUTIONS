@@ -25,7 +25,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static int minimumSum(String s) {
         // code here
