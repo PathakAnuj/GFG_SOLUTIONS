@@ -56,6 +56,7 @@ class GFG {
 
 
 
+
 class Solution {
     public static int arrayOperations(int n, int[] arr) {
         // code here
@@ -79,5 +80,4 @@ class Solution {
         return count;
     }
 }
-        
-        
+              
