@@ -56,6 +56,7 @@ class GFG {
 
 
 
+
 class Solution {
     public static long[][] dp = new long[100001][2];
 
@@ -82,4 +83,5 @@ class Solution {
         return Math.max(f(N, A, true), f(N, A, false));
     }
 }
+        
         
