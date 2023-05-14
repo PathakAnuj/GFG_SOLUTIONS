@@ -25,7 +25,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static long countBits(long N) {
    long count=0;
@@ -37,4 +36,4 @@ class Solution {
         }
 }
         
-        
+           
