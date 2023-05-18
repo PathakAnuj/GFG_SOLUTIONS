@@ -37,7 +37,6 @@ class GFG{
 
 
 
-
 class Solution {
 
     public static ArrayList<Integer> kthSmallestNum(int n, int[][] arr, int q, int[] quer) {
