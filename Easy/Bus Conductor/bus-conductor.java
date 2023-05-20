@@ -59,7 +59,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static int findMoves(int n, int[] chairs, int[] passengers) {
         // code here
@@ -72,4 +71,5 @@ class Solution {
         
     }
 }
-           
+        
+        
