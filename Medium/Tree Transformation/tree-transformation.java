@@ -56,6 +56,7 @@ class GFG {
 
 
 
+
 class Solution {
     public static int solve(int N, int[] p) {
         // code here
