@@ -85,6 +85,7 @@ public class LinkedList_Element_From_Last
 // } Driver Code Ends
 
 
+
 /* Structure of node
 
 class Node
@@ -94,7 +95,6 @@ class Node
     Node(int d) {data = d; next = null; }
 }
 */
-
 
 class GfG
 {
