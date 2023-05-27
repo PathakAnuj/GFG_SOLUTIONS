@@ -86,6 +86,7 @@ public class LinkedList_Element_From_Last
 
 
 
+
 /* Structure of node
 
 class Node
