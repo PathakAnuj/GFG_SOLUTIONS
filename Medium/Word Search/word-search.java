@@ -34,6 +34,7 @@ class GFG
 
 
 
+
 class Solution
 {
     boolean adjacentSearch(char[][] board, String word, int i, int j, int len)
