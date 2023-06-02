@@ -61,7 +61,6 @@ class GFG {
 
 
 
-
 class Solution {
     public static int maxEqualSum(int N1,int N2,int N3, int[] S1, int[] S2, int[] S3) {
         // code here
@@ -85,4 +84,5 @@ class Solution {
         return 0;
     }
 }
+        
         
