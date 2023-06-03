@@ -61,28 +61,30 @@ class GFG {
 
 
 
-
 class Solution {
-    public static int maxEqualSum(int N1,int N2,int N3, int[] S1, int[] S2, int[] S3) {
-        // code here
-        int a = 0; 
-        int b = 0; 
-        int c = 0; 
-        for (int i: S1) a += i;
-        for (int i: S2) b += i;
-        for (int i: S3) c += i;
-        int i = 0, j = 0, k = 0;
-        while (a > 0 && b > 0 && c > 0) {
-            if (a == b && b == c) return a;
-            else if (a >= b && a >= c) {
-                a -= S1[i++];
-            } else if (b >= c && b >= a) {
-                b -= S2[j++];
-            } else if (c >= a && c >= b) {
-                c -= S3[k++];
+    public static int maxEqualSum(int n1,int n2,int n3, int[] s1, int[] s2, int[] s3) {
+        int sum1=0, sum2=0, sum3=0;
+        for(int i=0;i<n1;i++) sum1+=s1[i];
+        for(int i=0;i<n2;i++) sum2+=s2[i];
+        for(int i=0;i<n3;i++) sum3+=s3[i];
+        int i1=0, i2=0, i3=0;
+        while(!(sum1==sum2 && sum2==sum3)) {
+            if(sum1>=sum2 && sum1>=sum3) {
+                if(i1>=n1) break;
+                else sum1-=s1[i1++];
             }
+            else if(sum2>=sum1 && sum2>=sum3) {
+                if(i2>=n2) break;
+                else sum2-=s2[i2++];
+            }
+            else if(sum3>=sum2 && sum3>=sum1) {
+                if(i3>=n3) break;
+                else sum3-=s3[i3++];
+            }
+            //System.out.println(sum1+" "+sum2+" "+sum3);
         }
+        if(sum1==sum2 && sum2==sum3) return sum1;
         return 0;
     }
 }
-               
+            
