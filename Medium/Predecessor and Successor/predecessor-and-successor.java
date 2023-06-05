@@ -116,7 +116,6 @@ class GfG {
 
 
 
-
 //Function to check whether a Binary Tree is BST or not.
 static void pre(Node root,int key)
 {
