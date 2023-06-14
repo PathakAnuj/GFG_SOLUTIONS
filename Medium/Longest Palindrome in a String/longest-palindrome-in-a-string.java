@@ -23,6 +23,7 @@ class GFG
 
 
 
+
 //User function Template for Java
 class Solution{
     static String longestPalin(String A){
