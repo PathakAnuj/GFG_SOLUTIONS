@@ -41,6 +41,7 @@ class GFG implements Runnable{
 
 
 
+
 class Solution {
     static long dp[][];
     public static long minTime(int n, int[] locations, int[] types) {
@@ -99,4 +100,4 @@ class Solution {
     }
 }
 
-           
+        
