@@ -23,6 +23,7 @@ class GFG{
 
 
 
+
 //User function Template for Java
 class Solution {
     public static int distributeTicket(int n,int k)
