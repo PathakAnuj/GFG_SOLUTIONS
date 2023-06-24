@@ -36,7 +36,6 @@ public static void main(String[] args)throws IOException
 
 
 
-
 /*Complete the given function*/
 class GfG
 {
